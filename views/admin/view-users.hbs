@@ -1,0 +1,37 @@
+<section>
+    <div class="container">
+        <div class="row ">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-5">
+              <a href="/admin/add-user" style="width: 150px;" class="btn btn-success ">Create User</a>
+
+            </div>
+
+    <table class="table table-success table-striped mt-1" id="table_id">
+      <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each users
+    }}
+    <tr>
+      <td>{{this.Name}}</td>
+      <td>{{this.Email}}</td>
+       <td><a href="/admin/edit-user/{{this._id}}" class="btn btn-outline-primary">Edit</a></td>
+      <td><a href="/admin/delete-users/{{this._id}}" class="btn btn-outline-danger" onclick="return confirm('are you want delete{{this.Name}}')">Delete</a></td>
+     
+    </tr>
+    {{/each}}
+    
+
+    
+  </tbody>  
+</table>
+</div>
+</div>
+
+</section>

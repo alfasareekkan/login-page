@@ -1,0 +1,25 @@
+<section >
+    <div class="container">
+    <form action="/admin/login" method="post" style="width: 350px;height: 200px;margin-top: 250px;margin-left: 410px;">
+  <!-- Email input -->
+  <div class="form-outline mb-4">
+    <input type="email" id="form2Example1" class="form-control" name="Email" required />
+    <label class="form-label" for="form2Example1">Email address</label>
+  </div>
+
+  <!-- Password input -->
+  <div class="form-outline mb-4">
+    <input type="password" id="form2Example2" class="form-control" name="Password" required/>
+    <label class="form-label" for="form2Example2">Password</label>
+  </div>
+  {{#if loginValue}}
+  <p>Invalid Email and Password</p>
+  {{/if}}
+
+
+  <div class="text-center">
+ <input type="submit" class="btn btn-primary" value="Login">
+  </div>
+</form>
+</div>
+</section>

@@ -1,0 +1,24 @@
+<section>
+    <div class="container">
+    <form action="/admin/edit-product/{{response._id}}" method="post" enctype="multipart/form-data">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Name</label>
+    <input type="input" class="form-control" name="name" value="{{response.name}}">
+  </div>
+   <div class="form-group">
+    <label >Category</label>
+    <input type="input" name="category" class="form-control" value="{{response.category}}" >
+  </div>
+   <div class="form-group">
+    <label >Descripton</label>
+    <input type="input" name="descripton" class="form-control" value="{{response.descripton}}">
+  </div>
+   <div class="form-group">
+    <img src="/product-image/{{response._id}}.jpg" alt="" width="100px" height="100px" id="imageView">
+    <label >Image</label>
+    <input type="file" class="form-control" name="Image" onchange="changeImage(event)">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+</section>
